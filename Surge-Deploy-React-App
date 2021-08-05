@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Surge-Deploy-React-App
+author: Usman Asif
+description: This action will deploy your React App automatically on surge using Surge token.
 
 # Controls when the action will run. 
 on:
@@ -33,5 +35,6 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
           
+         # Add Surge token in your secrets and change the sample project to your website name.
       - name: Deploying on Surge
-        run: surge ./build reactportfolio-usman.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build Sample-Project.surge.sh --token ${{secrets.SURGE_TOKEN}}
