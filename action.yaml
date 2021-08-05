@@ -3,6 +3,9 @@
 name: Surge-Deploy-React-App
 author: Usman Asif
 description: This action will deploy your React App automatically on surge using Surge token.
+branding:
+  icons: battery-charging
+  color: gray-dark
 
 # Controls when the action will run. 
 on:
