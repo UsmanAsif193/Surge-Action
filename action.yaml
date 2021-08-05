@@ -37,7 +37,3 @@ jobs:
         # Install Surge 
       - name: Install Surge
         run: npm install -g surge
-          
-         # Add Surge token in your secrets and change the sample project to your website name.
-      - name: Deploying on Surge
-        run: surge ./build Sample-Project.surge.sh --token ${{secrets.SURGE_TOKEN}}
