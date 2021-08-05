@@ -2,7 +2,10 @@
 
 name: Surge-Deploy-React-App
 author: Usman Asif
-description: This action will deploy your React App automatically on surge using Surge token.
+description: This action will deploy your React App automatically on surge using Surge token. Copy this line and add it to the end of the code. Change the domain and add a new secret containing the surge token.
+     "- name: Deploying on Surge
+        run: surge ./build Sample-Project.surge.sh --token ${{secrets.SURGE_TOKEN}}"
+
 branding:
   icons: 'battery-charging'
   color: gray-dark
