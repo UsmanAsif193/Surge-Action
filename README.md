@@ -6,7 +6,7 @@ Add Surge token in your secrets and change the sample project to your website na
 
 
       - name: Surge-Deploy-React-App
-        uses: UsmanAsif193/Surge-Action@v1.02
+        uses: UsmanAsif193/Surge-Action@v1.03
 
       - name: Deploying on Surge
         run: surge ./build Sample-Project.surge.sh --token ${{secrets.SURGE_TOKEN}}
