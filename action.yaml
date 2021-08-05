@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Surge-Deploy-React-App
 author: Usman Asif
 description: This action will deploy your React App automatically on surge using Surge token. Copy this line and add it to the end of the code. Change the domain and add a new secret containing the surge token.
@@ -10,33 +8,12 @@ branding:
   icons: 'battery-charging'
   color: gray-dark
 
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    env:
-      CI: false
-
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+runs:
+     - uses: actions/checkout@v2
       # Install node version 12
-      - name: Setup Node.js environment
-        run: npm install
-
-        # Build react app
-      - name: Build Yarn and npm
-        run: npm run build
-
-        # Install Surge 
-      - name: Install Surge
-        run: npm install -g surge
+     - name: Setup Node.js environment
+       run: npm install
+     - name: Build Yarn and npm
+       run: npm run build 
+     - name: Install Surge
+       run: npm install -g surge
